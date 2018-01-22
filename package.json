@@ -1,0 +1,21 @@
+{
+  "name": "clean-code",
+  "main": "server.js",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "latest",
+    "mongoose": "latest",
+    "body-parser": "latest",
+    "morgan": "latest"
+  },
+  "devDependencies": {
+    "chai": "latest",
+    "chai-http": "latest",
+    "mocha": "latest"
+  },
+  "scripts": {
+    "start": "nodemon ./server.js",
+    "dev": "nodemon ./server.js",
+    "test": "mocha --timeout 10000"
+  }
+}
