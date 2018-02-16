@@ -3,9 +3,9 @@
   "main": "server.js",
   "version": "0.0.1",
   "dependencies": {
-    "express": "latest",
-    "mongoose": "latest",
     "body-parser": "latest",
+    "express": "latest",
+    "mongoose": "4.8.5",
     "morgan": "latest"
   },
   "devDependencies": {

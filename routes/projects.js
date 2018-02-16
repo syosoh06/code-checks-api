@@ -6,10 +6,11 @@ router.route('/')
         const project = new Project(req.body);
 
         project.save(err => {
-            if (err)
-                res.send(err);
+            if (err) {
+                return res.send();
+            }
 
-            res.json({ message: 'User created!' });
+            res.json({ message: 'Project created!' });
         });
 
     })
