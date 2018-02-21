@@ -10,7 +10,7 @@ router.route('/')
             if (err)
                 res.send(err);
 
-            res.json({ message: 'User created!' });
+            res.json({ message: 'User created!' , user});
         });
 
     })
@@ -48,7 +48,7 @@ router.route('/:user_id')
                 if (err)
                     res.send(err);
 
-                res.json({ message: 'user updated!' });
+                res.json({ message: 'user updated!' , user});
             });
 
         });

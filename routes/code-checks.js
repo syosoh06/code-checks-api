@@ -10,7 +10,7 @@ router.route('/')
             if (err)
                 res.send(err);
 
-            res.json({ message: 'User created!' });
+            res.json({ message: 'Code check created!' , codeCheck});
         });
 
     })
@@ -46,7 +46,7 @@ router.route('/:code_check_id')
                 if (err)
                     res.send(err);
 
-                res.json({ message: 'code check updated!' });
+                res.json({ message: 'code check updated!' , codeCheck});
             });
 
         });

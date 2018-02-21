@@ -10,7 +10,7 @@ router.route('/')
                 return res.send();
             }
 
-            res.json({ message: 'Project created!' });
+            res.json({ message: 'Project created!' , project});
         });
 
     })
@@ -47,7 +47,7 @@ router.route('/:project_id')
                 if (err)
                     res.send(err);
 
-                res.json({ message: 'Project updated!' });
+                res.json({ message: 'Project updated!' , project});
             });
 
         });
