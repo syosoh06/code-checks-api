@@ -24,6 +24,21 @@ router.route('/')
         });
     });
 
+router.route('/:project_id')
+    .get((req, res) => {
+        console.log(req.params.project_id);
+        // find each code check with a project id matching the request params project id
+        const query = CodeCheck.find({ 'project._id':  req.params.project_id});
+
+        // execute the query at a later time
+        query.exec((err, codeChecks) => {
+            if (err)
+                res.send(err);
+
+            res.json(codeChecks);
+        });
+    });
+
 router.route('/:code_check_id')
     .get((req, res) => {
         CodeCheck.findById(req.params.code_check_id, (err, codeCheck) => {
