@@ -60,7 +60,7 @@ router.route('/:project_id')
             if (err)
                 res.send(err);
 
-            res.json({ message: 'Project Successfully deleted' });
+            res.json({ message: 'Project Successfully deleted' , deletedProjectId: req.params.project_id});
         });
     });
 
